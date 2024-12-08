@@ -33,6 +33,7 @@ vol.addEventListener('input', (event) => {
     else if (volume <= 0.5) {icon.className = "fa fa-volume-down"; }
 
     else {icon.className = "fa fa-volume-up";}
+      icon.style.opacity = vol.value > 0 ? 1 : 0.5;
 
 });
 
