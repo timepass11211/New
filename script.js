@@ -1,16 +1,21 @@
 let play = document.querySelector('#btn')
 let music = document.querySelector('#dd');
-let icon = document.getElementById('vol-icon')
-let vol = document.getElementById('vol')
-let currentTimeDisplay = document.getElementById('current-time');
+let icon = document.querySelector('#vol-icon')
+let vol = document.querySelector('#vol')
+let currentTimeDisplay = document.querySelector('#current-time');
 let h = document.getElementById('h');
+let m = document.getElementById('mm');
 
 
 play.addEventListener('click', () => {
     if (music.paused) {
         music.play();
         play.innerHTML = '<i class="fa-solid fa-pause"></i>';
-        play.style.fontSize = '26px'
+        play.style.fontSize = '26px';
+       
+        m.style.transform = "scale(1.2)"; // transform image 
+        m.style.transition = 'all 0.9s ease-in-out' //effect transition
+        
        
     }
 
@@ -18,10 +23,18 @@ play.addEventListener('click', () => {
         music.pause();
         play.innerHTML = '<i class="fa-solid fa-play" aria-hidden="true"></i>';
         play.style.fontSize = '22px'
+
+        m.style.transform = "scale(1)"; // revert image
+        m.style.transition = 'all 0.9s ease-in-out'; // revert transition
+        m.style.transform = 'rotate(20deg)'; 
+
      
     }
 
 });
+
+
+
 
 vol.addEventListener('input', (event) => {
 
@@ -71,7 +84,6 @@ setTimeout(() => {
        icon.style.opacity = vol.value > 0 ? 1 : 0.5;
 
 });
-
 
 music.addEventListener('timeupdate', () => {
     let currentTime = music.currentTime;
