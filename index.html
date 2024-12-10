@@ -222,16 +222,20 @@
   <section class="right">
     <div class="container">
       <p id="no-match" style="display: none; color: red;">Invalid Option</p>
+
+
       <div class="first-img">
         <div id="ww">
+
           <div>
             <div>
               <span id="current-time">0:00</span>
             </div>
           </div>
-    
-          <div id="btn"> <i class="fa-solid fa-play" aria-hidden="true" style="font-size: 22px;"></i>
+          <div id="btn">
+             <i class="fa-solid fa-play" aria-hidden="true" style="font-size: 22px;"></i>
           </div>
+          
 
           <div id="range">
             <i id="vol-icon" class="fa-solid fa-volume-high"></i>
@@ -239,11 +243,9 @@
           </div>
         </div>
         <h1 id="h">Music</h1>
-        <img src="music.jpg" alt="first-img">
+        <img id="mm" src="music.jpg" alt="first-img">
 
-        <div class="music">
-          <audio src="audio2.mp3" controls id="dd"></audio>
-        </div>
+        <audio data-src="audio1.mp3"></audio>
 
       </div>
 
@@ -254,12 +256,27 @@
 
         <div id="ww">
 
-    
+              
+          <div>
+            <div>
+              <span id="current-time">0:00</span>
+            </div>
+          </div>
+          <div id="btn"> <i class="fa-solid fa-play" aria-hidden="true" style="font-size: 22px;"></i>
+          </div>
+
+          <div id="range">
+            <i id="vol-icon" class="fa-solid fa-volume-high"></i>
+            <input type="range" id="vol" min="0" max="1" step="0.1" value="1">
+          </div>
 
         </div>
         <h1 id="h">Bhojpuri</h1>
         <img src="bhojpuri.jpg" alt="first-img">
 
+        <div class="music">
+          <audio src="audio2.mp3" controls id="dd"></audio>
+        </div>
         
       </div>
 
